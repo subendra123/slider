@@ -1,38 +1,177 @@
-.App {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Product Card */
+
+.card {
+  width: 280px !important;
+  margin-top: 1rem !important;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 450px !important;
+
+}
+
+.image-box { 
+  width: 265px; 
+  height: 240px; 
+  overflow: hidden; 
+  position: relative;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+ 
+} 
+
+.image-box img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  margin-top: 15px;
+} 
+
+
+.product_info {
+  padding: 10px;
+}
+.product_info h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.product_info p {
+padding: 1rem 10px;
+color: rgba(0, 0, 0, 0.9);
+}
+.product_info h1 {
+  font-weight: bold;
+  color: 	#ffa534;
+  letter-spacing: 20px;
+  padding: 0 2rem;
+
+}
+.button_section {
+  margin-bottom: 1rem;
+}
+.button_section button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width:92%;
+  height: 50px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  background-color: #1d7542;;
+  font-size: 15px;
+
+}
+.button_section button:hover {
+ background-color: #27ae60;
+ color: white;
+ transition: all 0.3s ease-in-out;
+}
+
+
+
+ 
+
+
+/* Product Card End */
+
+.carousel {
+  padding: 5rem;
+  background-color: #f3f3f3;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+
+
+}
+.box {
+  background-color: lightgreen;
+  height: 400px;
+  width: 300px !important;
+  margin: 0 1rem !important;
+}
+.box h3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*  Slider Style  */
+
+
+/* Give margin to box */
+.slick-slide div {  
+  margin:  0 0.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Change next icon arrow to plus + */
+.slick-next:before {
+  content: '+' !important;
+  cursor: pointer  !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slick-prev:before {
+  content: '-' !important;
+  cursor: pointer  !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* Change button with and height */
+.slick-arrow  {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: red !important;
+  border-radius: 50%;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Move Buton to top and left */
+.slick-prev, .slick-next  {
+  position: absolute;
+  top: -50px  !important;
+}
+.slick-prev, .slick-prev {
+  position: absolute;
+  left: 92%  !important;
+} 
+
+
+/* To All */
+
+#wrapper {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  padding: 10px; /* important !! */
+}
+
+.slick-slide { /* spacing in between each slide */
+  margin: 0 -55px;
+}
+
+.slick-list { /* spacing in between the group of slides */
+  padding: 0 20px; 
+}
+
+.slick-track { /* spacing for the slider itself */
+  min-height: 600px;
+}
+
+.slide {
+  position: relative;
+  float: left;
 }
